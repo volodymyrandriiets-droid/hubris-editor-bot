@@ -85,7 +85,7 @@ def editor(message):
         bot.reply_to(message, response.output_text)
 
     except Exception as e:
-        print(f"ERROR: {e}")
+        print(f"OPENAI ERROR: {type(e).__name__}: {e}", flush=True)
         bot.reply_to(
             message,
             "I couldn't process this request. Check the service logs."
